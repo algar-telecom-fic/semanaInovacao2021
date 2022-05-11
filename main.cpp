@@ -6,7 +6,7 @@ int main(){
     string str;
     vector<double> vet;
     
-    // Faz a leitura do arquivo
+    // Faz a leitura do arquivo com os numeros gerados
     ifstream arquivo("numeros.txt");
     while(getline(arquivo, str)){
         double val = stod(str);
@@ -34,6 +34,7 @@ int main(){
     
     desvPad = sqrt(variancia);
 
+    //Mostrando as informacoes na tela
     cout << "Foram lidos " << vet.size()+1 << " valores" << endl << endl;
     cout << "Soma: " << soma << endl;
     cout << "Media: " << media << endl;
@@ -48,6 +49,7 @@ int main(){
     for(int i = 0; i < vet.size(); i++){
         arquivoSaida << vet.at(i) << endl;;
     }
+    //Fecha o arquivo de saída
     arquivoSaida.close();
 
     cout << endl << "Programa finalizado" << endl;
